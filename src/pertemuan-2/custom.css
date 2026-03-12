@@ -1,0 +1,684 @@
+/* Import font San Francisco (font default iOS) */
+@import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&display=swap');
+
+/* CSS Variables untuk iOS 26 style */
+:root {
+    /* Warna khas iOS */
+    --ios-blue: #0A84FF;
+    --ios-light-blue: #5E5CE6;
+    --ios-green: #30D158;
+    --ios-indigo: #5E5CE6;
+    --ios-orange: #FF9F0A;
+    --ios-pink: #FF375F;
+    --ios-purple: #BF5AF2;
+    --ios-red: #FF453A;
+    --ios-teal: #64D2FF;
+    --ios-yellow: #FFD60A;
+    --ios-gray: #8E8E93;
+    --ios-gray2: #636366;
+    --ios-gray3: #48484A;
+    --ios-gray4: #3A3A3C;
+    --ios-gray5: #2C2C2E;
+    --ios-gray6: #1C1C1E;
+    
+    /* Warna background dengan efek liquid glass */
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-bg-dark: rgba(28, 28, 30, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.3);
+    --glass-border-dark: rgba(255, 255, 255, 0.1);
+    --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    
+    /* Efek liquid */
+    --liquid-gradient: linear-gradient(
+        125deg,
+        rgba(255, 255, 255, 0.8) 0%,
+        rgba(255, 255, 255, 0.4) 40%,
+        rgba(255, 255, 255, 0.2) 60%,
+        rgba(255, 255, 255, 0.4) 80%,
+        rgba(255, 255, 255, 0.8) 100%
+    );
+    
+    /* Shadow khas iOS */
+    --ios-shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05), 0 4px 12px rgba(0, 0, 0, 0.05);
+    --ios-shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08), 0 8px 24px rgba(0, 0, 0, 0.08);
+    --ios-shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.1), 0 16px 48px rgba(0, 0, 0, 0.1);
+    --ios-shadow-xl: 0 20px 48px rgba(0, 0, 0, 0.15), 0 32px 64px rgba(0, 0, 0, 0.15);
+    
+    /* Border radius khas iOS */
+    --ios-radius-sm: 10px;
+    --ios-radius-md: 14px;
+    --ios-radius-lg: 18px;
+    --ios-radius-xl: 24px;
+    --ios-radius-xxl: 32px;
+    --ios-radius-full: 9999px;
+    
+    /* Transisi halus ala iOS */
+    --ios-transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --ios-transition-bounce: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Reset dengan sentuhan iOS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Body dengan dynamic background */
+body {
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.5;
+    color: #1C1C1E;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Dynamic background dengan efek liquid */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 20%, rgba(10, 132, 255, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 40%, rgba(175, 82, 222, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 40% 70%, rgba(255, 159, 10, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 70% 90%, rgba(48, 209, 88, 0.3) 0%, transparent 50%),
+        linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    filter: blur(80px);
+    animation: liquidMove 20s ease-in-out infinite alternate;
+    z-index: -2;
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(100px);
+    z-index: -1;
+}
+
+/* Animasi liquid bergerak */
+@keyframes liquidMove {
+    0% {
+        transform: scale(1) rotate(0deg);
+        filter: blur(80px);
+    }
+    50% {
+        transform: scale(1.2) rotate(5deg);
+        filter: blur(100px);
+    }
+    100% {
+        transform: scale(1.1) rotate(-5deg);
+        filter: blur(90px);
+    }
+}
+
+/* Container utama dengan efek liquid glass */
+.card {
+    max-width: 800px;
+    width: 100%;
+    margin: 20px auto;
+    background: var(--glass-bg);
+    backdrop-filter: blur(40px) saturate(180%);
+    -webkit-backdrop-filter: blur(40px) saturate(180%);
+    padding: 40px;
+    border-radius: var(--ios-radius-xxl);
+    box-shadow: var(--ios-shadow-xl);
+    border: 1px solid var(--glass-border);
+    transition: var(--ios-transition-bounce);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efek liquid shimmer di atas card */
+.card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: var(--liquid-gradient);
+    transform: rotate(30deg);
+    animation: liquidShimmer 8s linear infinite;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+/* Animasi shimmer */
+@keyframes liquidShimmer {
+    0% {
+        transform: rotate(30deg) translateY(-30%);
+    }
+    100% {
+        transform: rotate(30deg) translateY(30%);
+    }
+}
+
+.card:hover {
+    transform: scale(1.02) translateY(-5px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.8);
+}
+
+/* Header dengan efek gradient khas iOS */
+h1 {
+    color: #1C1C1E;
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+/* Efek glass pada header */
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--ios-blue), var(--ios-purple));
+    border-radius: var(--ios-radius-full);
+    opacity: 0.5;
+}
+
+/* Subheader dengan style iOS */
+h2 {
+    color: #1C1C1E;
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 2rem 0 1rem;
+    letter-spacing: -0.01em;
+}
+
+h3 {
+    color: #3A3A3C;
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin: 1.5rem 0 1rem;
+}
+
+/* Paragraf dengan typography khas iOS */
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #3A3A3C;
+    margin-bottom: 1.2rem;
+    font-weight: 400;
+}
+
+/* Garis pemisah dengan efek liquid */
+hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.5),
+        var(--ios-blue),
+        var(--ios-purple),
+        var(--ios-blue),
+        rgba(255, 255, 255, 0.5),
+        transparent
+    );
+    margin: 30px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+hr::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+    animation: hrShimmer 3s ease-in-out infinite;
+}
+
+@keyframes hrShimmer {
+    0% { left: -100%; }
+    100% { left: 200%; }
+}
+
+/* Greeting dengan efek glass */
+small {
+    display: block;
+    text-align: center;
+    color: #636366;
+    margin-top: 20px;
+    font-size: 0.95rem;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    padding: 12px 24px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(20px);
+    border-radius: var(--ios-radius-full);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Button dengan style iOS 26 */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: var(--ios-radius-full);
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--ios-transition);
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+    letter-spacing: 0.3px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: var(--ios-blue);
+    box-shadow: var(--ios-shadow-sm);
+}
+
+.btn-primary {
+    background: var(--ios-blue);
+    color: white;
+    border: none;
+    box-shadow: 0 4px 16px rgba(10, 132, 255, 0.3);
+}
+
+.btn-primary:hover {
+    background: #0071E3;
+    transform: scale(1.05);
+    box-shadow: 0 8px 24px rgba(10, 132, 255, 0.4);
+}
+
+.btn-glass {
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: #1C1C1E;
+}
+
+.btn-glass:hover {
+    background: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+/* Card grid dengan efek glass */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+/* Feature card dengan liquid glass */
+.feature-card {
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(20px);
+    padding: 1.8rem;
+    border-radius: var(--ios-radius-xl);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transition: var(--ios-transition-bounce);
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+    animation: cardLiquid 10s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes cardLiquid {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    33% { transform: translate(5%, 5%) rotate(120deg); }
+    66% { transform: translate(-5%, 10%) rotate(240deg); }
+    100% { transform: translate(0, 0) rotate(360deg); }
+}
+
+.feature-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: var(--ios-shadow-lg);
+}
+
+.feature-card h4 {
+    color: #1C1C1E;
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.feature-card p {
+    color: #3A3A3C;
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+/* Badge dengan efek glass */
+.badge {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: var(--ios-radius-full);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: #1C1C1E;
+}
+
+.badge-success {
+    background: rgba(48, 209, 88, 0.2);
+    border-color: rgba(48, 209, 88, 0.3);
+    color: #30D158;
+}
+
+.badge-warning {
+    background: rgba(255, 159, 10, 0.2);
+    border-color: rgba(255, 159, 10, 0.3);
+    color: #FF9F0A;
+}
+
+/* Alert dengan efek glass */
+.alert {
+    padding: 1rem 1.8rem;
+    border-radius: var(--ios-radius-lg);
+    margin-bottom: 1.5rem;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: #1C1C1E;
+}
+
+.alert-info {
+    background: rgba(10, 132, 255, 0.15);
+    border-color: rgba(10, 132, 255, 0.3);
+    color: var(--ios-blue);
+}
+
+/* Form styles dengan efek glass */
+.form-group {
+    margin-bottom: 1.8rem;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.6rem;
+    font-weight: 500;
+    color: #1C1C1E;
+    font-size: 0.95rem;
+    letter-spacing: 0.3px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: var(--ios-radius-lg);
+    font-size: 1rem;
+    transition: var(--ios-transition);
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    color: #1C1C1E;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--ios-blue);
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 0 4px rgba(10, 132, 255, 0.1);
+}
+
+/* Table dengan efek glass */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(20px);
+    border-radius: var(--ios-radius-xl);
+    overflow: hidden;
+}
+
+.table th {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 1rem 1.5rem;
+    text-align: left;
+    font-weight: 600;
+    color: #1C1C1E;
+    font-size: 0.95rem;
+}
+
+.table td {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    color: #3A3A3C;
+}
+
+.table tr:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Loading spinner dengan efek glass */
+.spinner {
+    width: 44px;
+    height: 44px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top-color: var(--ios-blue);
+    border-radius: 50%;
+    animation: spin 1s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    backdrop-filter: blur(10px);
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Progress bar dengan efek liquid */
+.progress {
+    width: 100%;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    border-radius: var(--ios-radius-full);
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--ios-blue), var(--ios-purple));
+    border-radius: var(--ios-radius-full);
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, 
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
+    animation: progressShimmer 2s ease-in-out infinite;
+}
+
+@keyframes progressShimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* Modal dengan efek glass */
+.modal {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(60px);
+    border-radius: var(--ios-radius-xxl);
+    padding: 32px;
+    box-shadow: var(--ios-shadow-xl);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Responsive design ala iOS */
+@media (max-width: 768px) {
+    .card {
+        padding: 30px;
+        margin: 15px;
+        border-radius: var(--ios-radius-xl);
+    }
+    
+    h1 {
+        font-size: 2.2rem;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 24px;
+    }
+    
+    h1 {
+        font-size: 1.9rem;
+    }
+    
+    h1::after {
+        width: 40px;
+    }
+    
+    .feature-card {
+        padding: 1.4rem;
+    }
+}
+
+/* Animasi fade in ala iOS */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.98) translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.card {
+    animation: fadeIn 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Print styles tetap profesional */
+@media print {
+    body {
+        background: white;
+    }
+    
+    body::before,
+    body::after,
+    .card::before,
+    .feature-card::before {
+        display: none;
+    }
+    
+    .card {
+        background: white;
+        backdrop-filter: none;
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+}
+
+/* Dark mode support untuk iOS 26 */
+@media (prefers-color-scheme: dark) {
+    body {
+        color: #FFFFFF;
+    }
+    
+    body::after {
+        background: rgba(0, 0, 0, 0.5);
+    }
+    
+    .card {
+        background: var(--glass-bg-dark);
+        border-color: var(--glass-border-dark);
+    }
+    
+    h1, h2, h3, h4, p, .form-label {
+        color: #FFFFFF;
+    }
+    
+    .feature-card h4, .feature-card p {
+        color: #FFFFFF;
+    }
+    
+    .badge, .small, .alert {
+        color: #FFFFFF;
+    }
+    
+    .form-input {
+        background: rgba(44, 44, 46, 0.5);
+        color: #FFFFFF;
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .table th, .table td {
+        color: #FFFFFF;
+    }
+    
+    .btn-glass {
+        background: rgba(44, 44, 46, 0.5);
+        border-color: rgba(255, 255, 255, 0.1);
+        color: #FFFFFF;
+    }
+    
+    .btn-glass:hover {
+        background: rgba(58, 58, 60, 0.7);
+    }
+}
