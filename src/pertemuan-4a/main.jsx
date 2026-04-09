@@ -7,6 +7,7 @@ createRoot(document.getElementById("root")).render(
     {/* <TailwindCSS/> */}
     {/* <UserForm/> */}
     {/* <HitungGajiForm/> */}
-    <FrameworkList/>
+    <ResponsiveText/>
   </div>,
 );
+
