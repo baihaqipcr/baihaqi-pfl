@@ -1,0 +1,642 @@
+[
+  {
+    "id": 1,
+    "name": "Pantai Kuta",
+    "category": "Pantai",
+    "rating": 4.6,
+    "price": 15000,
+    "isOpen": true,
+    "description": "Pantai ikonik Bali dengan ombak surfing kelas dunia, sunset memukau, dan suasana yang ramai sepanjang hari.",
+    "image": "https://travelandtrip.com/storage/temp/public/28d/632/b4761b84788adfb8408940330__1600.jpg",
+    "address": {
+      "city": "Badung",
+      "province": "Bali",
+      "coordinates": { "lat": -8.7184, "lng": 115.1686 }
+    },
+    "facilities": {
+      "parking": true,
+      "wifi": false,
+      "restaurant": true,
+      "toilet": true,
+      "surfRental": true
+    },
+    "contact": {
+      "phone": "+62361755660",
+      "email": "info@kutabeach.id",
+      "website": "kutabeach.id"
+    },
+    "reviews": {
+      "count": 12840,
+      "average": 4.6,
+      "latest": "Tempat favorit keluarga kami setiap liburan ke Bali!"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Candi Borobudur",
+    "category": "Sejarah",
+    "rating": 4.9,
+    "price": 50000,
+    "isOpen": true,
+    "description": "Candi Buddha terbesar di dunia yang merupakan Warisan Budaya UNESCO, dibangun pada abad ke-9 di Magelang.",
+    "image": "https://torch.id/cdn/shop/articles/Artikel_173_-_Preview.webp?v=1713644561&width=1100",
+    "address": {
+      "city": "Magelang",
+      "province": "Jawa Tengah",
+      "coordinates": { "lat": -7.6079, "lng": 110.2038 }
+    },
+    "facilities": {
+      "parking": true,
+      "wifi": true,
+      "restaurant": true,
+      "toilet": true,
+      "surfRental": false
+    },
+    "contact": {
+      "phone": "+62293788266",
+      "email": "info@borobudurpark.co.id",
+      "website": "borobudurpark.co.id"
+    },
+    "reviews": {
+      "count": 28900,
+      "average": 4.9,
+      "latest": "Menakjubkan! Arsitekturnya luar biasa dan penuh makna sejarah."
+    }
+  },
+  {
+    "id": 3,
+    "name": "Raja Ampat",
+    "category": "Bahari",
+    "rating": 4.9,
+    "price": 500000,
+    "isOpen": true,
+    "description": "Surga bawah laut di ujung timur Indonesia dengan keanekaragaman hayati laut tertinggi di dunia.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRExRhfJAJ3fmREbv2l9qPcoS-XfLuO32yp0Q&s",
+    "address": {
+      "city": "Raja Ampat",
+      "province": "Papua Barat",
+      "coordinates": { "lat": -0.5897, "lng": 130.1263 }
+    },
+    "facilities": {
+      "parking": false,
+      "wifi": true,
+      "restaurant": true,
+      "toilet": true,
+      "surfRental": true
+    },
+    "contact": {
+      "phone": "+62985421100",
+      "email": "visit@rajaampat.go.id",
+      "website": "rajaampat.go.id"
+    },
+    "reviews": {
+      "count": 9200,
+      "average": 4.9,
+      "latest": "Diving terbaik yang pernah saya lakukan seumur hidup!"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Gunung Bromo",
+    "category": "Alam",
+    "rating": 4.8,
+    "price": 320000,
+    "isOpen": true,
+    "description": "Gunung berapi aktif di Jawa Timur yang terkenal dengan lautan pasir dan pemandangan matahari terbit yang spektakuler.",
+    "image": "https://content.skyscnr.com/m/4f79e09f5dd4a4b8/original/GettyImages-163729728.jpg?resize=1224%3Aauto",
+    "address": {
+      "city": "Probolinggo",
+      "province": "Jawa Timur",
+      "coordinates": { "lat": -7.9425, "lng": 112.9530 }
+    },
+    "facilities": {
+      "parking": true,
+      "wifi": false,
+      "restaurant": true,
+      "toilet": true,
+      "surfRental": false
+    },
+    "contact": {
+      "phone": "+62335571119",
+      "email": "info@tnbts.id",
+      "website": "tnbromotenggersemeru.org"
+    },
+    "reviews": {
+      "count": 18500,
+      "average": 4.8,
+      "latest": "Sunrise Bromo adalah pengalaman yang tak terlupakan."
+    }
+  },
+  {
+    "id": 5,
+    "name": "Danau Toba",
+    "category": "Alam",
+    "rating": 4.7,
+    "price": 25000,
+    "isOpen": true,
+    "description": "Danau vulkanik terbesar di dunia sekaligus danau terluas di Asia Tenggara, terletak di Sumatera Utara.",
+    "image": "https://regalsprings.co.id/wp-content/uploads/2023/05/danau-toba.jpg",
+    "address": {
+      "city": "Simalungun",
+      "province": "Sumatera Utara",
+      "coordinates": { "lat": 2.6845, "lng": 98.8756 }
+    },
+    "facilities": {
+      "parking": true,
+      "wifi": true,
+      "restaurant": true,
+      "toilet": true,
+      "surfRental": false
+    },
+    "contact": {
+      "phone": "+6262910123",
+      "email": "info@danautobaofficial.id",
+      "website": "danautobaofficial.id"
+    },
+    "reviews": {
+      "count": 14200,
+      "average": 4.7,
+      "latest": "Pemandangannya luar biasa, udaranya segar dan menyegarkan."
+    }
+  },
+  {
+    "id": 6,
+    "name": "Taman Nasional Komodo",
+    "category": "Satwa",
+    "rating": 4.8,
+    "price": 250000,
+    "isOpen": true,
+    "description": "Rumah bagi komodo, kadal terbesar di dunia. Taman ini juga memiliki pantai-pantai cantik dan kekayaan bawah laut.",
+    "image": "https://stimsukmamedan.ac.id/wp-content/uploads/2025/02/5d8c64544d656-1080x675.jpg",
+    "address": {
+      "city": "Manggarai Barat",
+      "province": "Nusa Tenggara Timur",
+      "coordinates": { "lat": -8.5498, "lng": 119.4838 }
+    },
+    "facilities": {
+      "parking": false,
+      "wifi": false,
+      "restaurant": true,
+      "toilet": true,
+      "surfRental": true
+    },
+    "contact": {
+      "phone": "+62385241192",
+      "email": "info@komodonationalpark.id",
+      "website": "komodonationalpark.id"
+    },
+    "reviews": {
+      "count": 7800,
+      "average": 4.8,
+      "latest": "Melihat komodo langsung adalah pengalaman luar biasa!"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Pantai Parangtritis",
+    "category": "Pantai",
+    "rating": 4.3,
+    "price": 10000,
+    "isOpen": true,
+    "description": "Pantai legendaris di selatan Yogyakarta dengan legenda Ratu Kidul dan hamparan pasir hitam vulkanik yang dramatis.",
+    "image": "https://avilorentcar.com/wp-content/uploads/2025/04/pantai-parangtritis.jpg",
+    "address": {
+      "city": "Bantul",
+      "province": "DI Yogyakarta",
+      "coordinates": { "lat": -8.0256, "lng": 110.3314 }
+    },
+    "facilities": {
+      "parking": true,
+      "wifi": false,
+      "restaurant": true,
+      "toilet": true,
+      "surfRental": false
+    },
+    "contact": {
+      "phone": "+62274367272",
+      "email": "info@parangtritis.id",
+      "website": "parangtritis.id"
+    },
+    "reviews": {
+      "count": 11400,
+      "average": 4.3,
+      "latest": "Pantai khas Jogja yang wajib dikunjungi dengan suasana mistis."
+    }
+  },
+  {
+    "id": 8,
+    "name": "Ubud",
+    "category": "Budaya",
+    "rating": 4.8,
+    "price": 0,
+    "isOpen": true,
+    "description": "Pusat seni dan budaya Bali yang menakjubkan, dikelilingi sawah terasering dan hutan tropis yang asri.",
+    "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/59/d8/e1/caption.jpg?w=1400&h=1400&s=1",
+    "address": {
+      "city": "Gianyar",
+      "province": "Bali",
+      "coordinates": { "lat": -8.5069, "lng": 115.2625 }
+    },
+    "facilities": {
+      "parking": true,
+      "wifi": true,
+      "restaurant": true,
+      "toilet": true,
+      "surfRental": false
+    },
+    "contact": {
+      "phone": "+62361975285",
+      "email": "hello@ubud-bali.id",
+      "website": "ubud-bali.id"
+    },
+    "reviews": {
+      "count": 22100,
+      "average": 4.8,
+      "latest": "Tempat terbaik untuk menikmati ketenangan dan seni Bali."
+    }
+  },
+  {
+    "id": 9,
+    "name": "Kawah Ijen",
+    "category": "Alam",
+    "rating": 4.7,
+    "price": 150000,
+    "isOpen": true,
+    "description": "Kawah belerang aktif yang terkenal dengan fenomena blue fire langka yang hanya ada dua di dunia.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoT9c826byxc0b_8nMQPWGW8WdrbL6_mg5Yw&s",
+    "address": {
+      "city": "Banyuwangi",
+      "province": "Jawa Timur",
+      "coordinates": { "lat": -8.0580, "lng": 114.2422 }
+    },
+    "facilities": {
+      "parking": true,
+      "wifi": false,
+      "restaurant": false,
+      "toilet": true,
+      "surfRental": false
+    },
+    "contact": {
+      "phone": "+62333631142",
+      "email": "info@kawahijen.id",
+      "website": "kawahijen.id"
+    },
+    "reviews": {
+      "count": 8900,
+      "average": 4.7,
+      "latest": "Blue fire di dini hari adalah fenomena paling ajaib yang pernah saya lihat!"
+    }
+  },
+  {
+    "id": 10,
+    "name": "Labuan Bajo",
+    "category": "Bahari",
+    "rating": 4.8,
+    "price": 200000,
+    "isOpen": true,
+    "description": "Kota pelabuhan cantik di NTT yang menjadi pintu masuk ke Taman Nasional Komodo dan spot diving kelas dunia.",
+    "image": "https://luxuryescapes.com/inspiration/wp-content/uploads/2024/08/shutterstock_2302424373-1.jpg",
+    "address": {
+      "city": "Manggarai Barat",
+      "province": "Nusa Tenggara Timur",
+      "coordinates": { "lat": -8.4538, "lng": 119.8892 }
+    },
+    "facilities": {
+      "parking": true,
+      "wifi": true,
+      "restaurant": true,
+      "toilet": true,
+      "surfRental": true
+    },
+    "contact": {
+      "phone": "+62385241234",
+      "email": "visit@labuanbajo.id",
+      "website": "labuanbajo.id"
+    },
+    "reviews": {
+      "count": 10300,
+      "average": 4.8,
+      "latest": "Surga tersembunyi Indonesia yang wajib masuk bucket list!"
+    }
+  },
+  {
+    "id": 11,
+    "name": "Prambanan",
+    "category": "Sejarah",
+    "rating": 4.7,
+    "price": 50000,
+    "isOpen": true,
+    "description": "Kompleks candi Hindu terbesar di Indonesia dan Asia Tenggara, Warisan Budaya UNESCO dibangun abad ke-9.",
+    "image": "https://fatek.umsu.ac.id/wp-content/uploads/2023/06/Candi-Prambanan-Makna-Yang-Terkandung-di-Dalamnya.jpg",
+    "address": {
+      "city": "Sleman",
+      "province": "DI Yogyakarta",
+      "coordinates": { "lat": -7.7520, "lng": 110.4914 }
+    },
+    "facilities": {
+      "parking": true,
+      "wifi": true,
+      "restaurant": true,
+      "toilet": true,
+      "surfRental": false
+    },
+    "contact": {
+      "phone": "+62274496401",
+      "email": "info@borobudurpark.co.id",
+      "website": "prambanan.com"
+    },
+    "reviews": {
+      "count": 19500,
+      "average": 4.7,
+      "latest": "Megah dan menakjubkan, terutama saat pertunjukan sendratari Ramayana!"
+    }
+  },
+  {
+    "id": 12,
+    "name": "Nusa Penida",
+    "category": "Pantai",
+    "rating": 4.8,
+    "price": 20000,
+    "isOpen": true,
+    "description": "Pulau surga di tenggara Bali yang terkenal dengan tebing dramatis, pantai tersembunyi, dan spot snorkeling kelas dunia.",
+    "image": "https://girleatworld.net/wp-content/uploads/2018/04/nusa-penida-kelingking-1.jpg",
+    "address": {
+      "city": "Klungkung",
+      "province": "Bali",
+      "coordinates": { "lat": -8.7278, "lng": 115.5444 }
+    },
+    "facilities": {
+      "parking": true,
+      "wifi": false,
+      "restaurant": true,
+      "toilet": true,
+      "surfRental": true
+    },
+    "contact": {
+      "phone": "+62366023456",
+      "email": "info@nusapenida.id",
+      "website": "nusapenida.id"
+    },
+    "reviews": {
+      "count": 15600,
+      "average": 4.8,
+      "latest": "Kelingking Beach adalah pantai paling cantik yang pernah saya lihat!"
+    }
+  },
+  {
+    "id": 13,
+    "name": "Taman Mini Indonesia Indah",
+    "category": "Budaya",
+    "rating": 4.2,
+    "price": 25000,
+    "isOpen": true,
+    "description": "Taman wisata budaya yang merangkum keanekaragaman budaya, arsitektur, dan flora fauna dari 34 provinsi Indonesia.",
+    "image": "https://akcdn.detik.net.id/visual/2021/04/08/wisata-tmii_169.jpeg?w=1200",
+    "address": {
+      "city": "Jakarta Timur",
+      "province": "DKI Jakarta",
+      "coordinates": { "lat": -6.3024, "lng": 106.8951 }
+    },
+    "facilities": {
+      "parking": true,
+      "wifi": true,
+      "restaurant": true,
+      "toilet": true,
+      "surfRental": false
+    },
+    "contact": {
+      "phone": "+0218401182",
+      "email": "info@tamanmini.id",
+      "website": "tamanmini.id"
+    },
+    "reviews": {
+      "count": 24300,
+      "average": 4.2,
+      "latest": "Cocok banget buat wisata keluarga dan mengenal budaya Indonesia."
+    }
+  },
+  {
+    "id": 14,
+    "name": "Gili Trawangan",
+    "category": "Pantai",
+    "rating": 4.6,
+    "price": 20000,
+    "isOpen": true,
+    "description": "Pulau kecil bebas kendaraan bermotor di Lombok Utara dengan snorkeling, diving, dan suasana pantai yang santai.",
+    "image": "https://images.trvl-media.com/place/6047546/e2ba17f4-ff68-4c5e-a681-31e7578e6e94.jpg",
+    "address": {
+      "city": "Lombok Utara",
+      "province": "Nusa Tenggara Barat",
+      "coordinates": { "lat": -8.3534, "lng": 116.0370 }
+    },
+    "facilities": {
+      "parking": false,
+      "wifi": true,
+      "restaurant": true,
+      "toilet": true,
+      "surfRental": true
+    },
+    "contact": {
+      "phone": "+62370612345",
+      "email": "visit@gilitrawangan.id",
+      "website": "gilitrawangan.id"
+    },
+    "reviews": {
+      "count": 13700,
+      "average": 4.6,
+      "latest": "Atmosfernya sangat menyenangkan, tidak ada motor bikin lebih nyaman jalan kaki!"
+    }
+  },
+  {
+    "id": 15,
+    "name": "Gunung Rinjani",
+    "category": "Alam",
+    "rating": 4.8,
+    "price": 150000,
+    "isOpen": false,
+    "description": "Gunung berapi tertinggi kedua di Indonesia dengan danau kawah Segara Anak yang menakjubkan di Lombok.",
+    "image": "https://images.trvl-media.com/place/553248621563223391/0f5bfe44-f160-48d6-999d-a488ce684b91.jpg",
+    "address": {
+      "city": "Lombok Timur",
+      "province": "Nusa Tenggara Barat",
+      "coordinates": { "lat": -8.4119, "lng": 116.4644 }
+    },
+    "facilities": {
+      "parking": true,
+      "wifi": false,
+      "restaurant": false,
+      "toilet": true,
+      "surfRental": false
+    },
+    "contact": {
+      "phone": "+62376623211",
+      "email": "info@rinjaniguide.id",
+      "website": "rinjaniguide.id"
+    },
+    "reviews": {
+      "count": 6700,
+      "average": 4.8,
+      "latest": "Mendaki Rinjani adalah pencapaian terbesar saya, viewnya luar biasa!"
+    }
+  },
+  {
+    "id": 16,
+    "name": "Pulau Bunaken",
+    "category": "Bahari",
+    "rating": 4.7,
+    "price": 150000,
+    "isOpen": true,
+    "description": "Taman laut nasional di Sulawesi Utara dengan keanekaragaman terumbu karang dan biota laut yang sangat tinggi.",
+    "image": "https://torch.id/cdn/shop/articles/Artikel_172_-_Preview.webp?v=1713774282&width=1100",
+    "address": {
+      "city": "Manado",
+      "province": "Sulawesi Utara",
+      "coordinates": { "lat": 1.6138, "lng": 124.7577 }
+    },
+    "facilities": {
+      "parking": false,
+      "wifi": false,
+      "restaurant": true,
+      "toilet": true,
+      "surfRental": true
+    },
+    "contact": {
+      "phone": "+62431863700",
+      "email": "info@bunaken.id",
+      "website": "bunaken.id"
+    },
+    "reviews": {
+      "count": 5900,
+      "average": 4.7,
+      "latest": "Wall diving di Bunaken tidak ada tandingannya di Asia Tenggara!"
+    }
+  },
+  {
+    "id": 17,
+    "name": "Keraton Yogyakarta",
+    "category": "Sejarah",
+    "rating": 4.5,
+    "price": 15000,
+    "isOpen": true,
+    "description": "Istana resmi Kesultanan Ngayogyakarta Hadiningrat yang masih aktif, menjadi pusat kebudayaan Jawa yang kaya.",
+    "image": "https://travelspromo.com/wp-content/uploads/2019/05/salah-satu-ruang-di-keraton-yogyakarta-Mujiman-Muji.jpg",
+    "address": {
+      "city": "Yogyakarta",
+      "province": "DI Yogyakarta",
+      "coordinates": { "lat": -7.8052, "lng": 110.3642 }
+    },
+    "facilities": {
+      "parking": true,
+      "wifi": false,
+      "restaurant": false,
+      "toilet": true,
+      "surfRental": false
+    },
+    "contact": {
+      "phone": "+62274373721",
+      "email": "info@kratonjogja.id",
+      "website": "kratonjogja.id"
+    },
+    "reviews": {
+      "count": 17800,
+      "average": 4.5,
+      "latest": "Sangat kaya budaya, pemandunya ramah dan informatif."
+    }
+  },
+  {
+    "id": 18,
+    "name": "Taman Nasional Lorentz",
+    "category": "Satwa",
+    "rating": 4.6,
+    "price": 200000,
+    "isOpen": true,
+    "description": "Taman nasional terluas di Asia Tenggara dan satu-satunya di dunia yang mencakup es tropis hingga terumbu karang.",
+    "image": "https://static0.thetravelimages.com/wordpress/wp-content/uploads/2025/10/view-at-merced-river-and-el-capital-in-yosemite-national-park-in-california.jpg?q=49&fit=crop&w=825&dpr=2",
+    "address": {
+      "city": "Mimika",
+      "province": "Papua",
+      "coordinates": { "lat": -4.6817, "lng": 137.4419 }
+    },
+    "facilities": {
+      "parking": false,
+      "wifi": false,
+      "restaurant": false,
+      "toilet": true,
+      "surfRental": false
+    },
+    "contact": {
+      "phone": "+62901321456",
+      "email": "info@lorentz.id",
+      "website": "lorentznationalpark.id"
+    },
+    "reviews": {
+      "count": 2100,
+      "average": 4.6,
+      "latest": "Pengalaman petualangan terdasyat yang pernah saya alami!"
+    }
+  },
+  {
+    "id": 19,
+    "name": "Kepulauan Derawan",
+    "category": "Bahari",
+    "rating": 4.7,
+    "price": 300000,
+    "isOpen": true,
+    "description": "Kepulauan cantik di Kalimantan Timur yang terkenal dengan penyu hijau, ubur-ubur tak menyengat, dan air biru jernih.",
+    "image": "https://img2.beritasatu.com/investor/2024/08/1725076450-1280x853.webp",
+    "address": {
+      "city": "Berau",
+      "province": "Kalimantan Timur",
+      "coordinates": { "lat": 2.2869, "lng": 118.2466 }
+    },
+    "facilities": {
+      "parking": false,
+      "wifi": false,
+      "restaurant": true,
+      "toilet": true,
+      "surfRental": true
+    },
+    "contact": {
+      "phone": "+62554321789",
+      "email": "visit@derawan.id",
+      "website": "derawan.id"
+    },
+    "reviews": {
+      "count": 4800,
+      "average": 4.7,
+      "latest": "Berenang bersama penyu di sini adalah mimpi yang jadi kenyataan!"
+    }
+  },
+  {
+    "id": 20,
+    "name": "Tanah Lot",
+    "category": "Budaya",
+    "rating": 4.5,
+    "price": 60000,
+    "isOpen": true,
+    "description": "Pura Hindu di atas batu karang di tepi laut Bali, menjadi salah satu ikon budaya dan tempat sunset terpopuler di Bali.",
+    "image": "https://kura2bus.com/files/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBc1lCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d14e81c5b91050c6f4af5dd0a25840cb9d0fbc0f/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9MWm05eWJXRjBPZ2wzWldKd09oUnlaWE5wZW1WZmRHOWZiR2x0YVhSYkIya0NPQVJwQWpnRU9neGpiMjUyWlhKME93WT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--4759869aaa1270d3cd556742428b9bef8acb6049/IMG_2504.webp",
+    "address": {
+      "city": "Tabanan",
+      "province": "Bali",
+      "coordinates": { "lat": -8.6215, "lng": 115.0866 }
+    },
+    "facilities": {
+      "parking": true,
+      "wifi": false,
+      "restaurant": true,
+      "toilet": true,
+      "surfRental": false
+    },
+    "contact": {
+      "phone": "+62361880361",
+      "email": "info@tanahlot.id",
+      "website": "tanahlot.id"
+    },
+    "reviews": {
+      "count": 21000,
+      "average": 4.5,
+      "latest": "Sunset di sini adalah yang paling romantis di Bali!"
+    }
+  }
+]
