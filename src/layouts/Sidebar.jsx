@@ -23,6 +23,13 @@ const icons = {
       <path d="M2 14c0-3.3 2.7-6 6-6s6 2.7 6 6"/>
     </svg>
   ),
+  error: (
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
+      <circle cx="8" cy="8" r="7"/>
+      <line x1="8" y1="4" x2="8" y2="8"/>
+      <line x1="8" y1="10" x2="8" y2="10"/>
+    </svg>
+  ),
   chevron: (
     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
       <polyline points="5 3 9 7 5 11"/>
@@ -44,6 +51,14 @@ const NAV_GROUPS = [
       { key: 'dashboard', label: 'Dashboard',   icon: 'dashboard',   routable: true  },
       { key: 'order',     label: 'Order List',  icon: 'order',       routable: true  },
       { key: 'customer',  label: 'Customer',    icon: 'customer',    routable: true  },
+    ],
+  },
+  {
+    label: 'Error Pages',
+    items: [
+      { key: 'error400',  label: 'Error 400',   icon: 'error',       routable: true  },
+      { key: 'error401',  label: 'Error 401',   icon: 'error',       routable: true  },
+      { key: 'error403',  label: 'Error 403',   icon: 'error',       routable: true  },
     ],
   },
 ]

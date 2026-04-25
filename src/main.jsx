@@ -14,6 +14,9 @@ import Header     from './layouts/Header'
 import Dashboard  from './pages/Dashboard'
 import OrderList  from './pages/OrderList'
 import Customer   from './pages/Customer'
+import Error400   from './pages/Error400'
+import Error401   from './pages/Error401'
+import Error403   from './pages/Error403'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 
 import './assets/tailwind.css'
@@ -23,6 +26,9 @@ const PAGES = {
   dashboard: Dashboard,
   order:     OrderList,
   customer:  Customer,
+  error400:  Error400,
+  error401:  Error401,
+  error403:  Error403,
 }
 
 /* ── Page transition wrapper ──────────────────────────────── */
