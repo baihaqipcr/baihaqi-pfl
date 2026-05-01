@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 
 /* ── Icons ─────────────────────────────────────────────── */
 const icons = {
@@ -43,22 +43,22 @@ const icons = {
   ),
 }
 
-/* ── Nav groups ─────────────────────────────────────────── */
+/* ── Nav groups (Ditambahkan property "path" untuk URL) ── */
 const NAV_GROUPS = [
   {
     label: 'Main Menu',
     items: [
-      { key: 'dashboard', label: 'Dashboard',   icon: 'dashboard',   routable: true  },
-      { key: 'order',     label: 'Order List',  icon: 'order',       routable: true  },
-      { key: 'customer',  label: 'Customer',    icon: 'customer',    routable: true  },
+      { key: 'dashboard', label: 'Dashboard',  icon: 'dashboard', routable: true, path: '/' },
+      { key: 'order',     label: 'Order List', icon: 'order',     routable: true, path: '/orders' },
+      { key: 'customer',  label: 'Customer',   icon: 'customer',  routable: true, path: '/customers' },
     ],
   },
   {
     label: 'Error Pages',
     items: [
-      { key: 'error400',  label: 'Error 400',   icon: 'error',       routable: true  },
-      { key: 'error401',  label: 'Error 401',   icon: 'error',       routable: true  },
-      { key: 'error403',  label: 'Error 403',   icon: 'error',       routable: true  },
+      { key: 'error400',  label: 'Error 400',  icon: 'error',     routable: true, path: '/error400' },
+      { key: 'error401',  label: 'Error 401',  icon: 'error',     routable: true, path: '/error401' },
+      { key: 'error403',  label: 'Error 403',  icon: 'error',     routable: true, path: '/error403' },
     ],
   },
 ]
@@ -70,14 +70,15 @@ const BADGES = {
   chat:     { count: 12, color: 'bg-orange-400' },
 }
 
-/* ── Single nav button ─────────────────────────────────── */
-function NavItem({ item, active, onClick }) {
-  const isActive  = active === item.key
+/* ── Single nav button (Ubah button jadi Link) ─────────── */
+function NavItem({ item, currentPath }) {
+  // Mengecek apakah menu ini aktif berdasarkan URL saat ini
+  const isActive  = currentPath === item.path
   const badge     = BADGES[item.key]
 
   return (
-    <button
-      onClick={() => onClick(item.key)}
+    <Link
+      to={item.path || '#'}
       title={item.label}
       className={`
         group relative w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl
@@ -117,18 +118,14 @@ function NavItem({ item, active, onClick }) {
           {icons.chevron}
         </span>
       )}
-    </button>
+    </Link>
   )
 }
 
 /* ── Sidebar ─────────────────────────────────────────────── */
-export default function Sidebar({ activePage, onNavigate }) {
-  const [active, setActive] = useState(activePage || 'dashboard')
-
-  function handleClick(key) {
-    setActive(key)
-    if (onNavigate) onNavigate(key)
-  }
+export default function Sidebar() {
+  // Gunakan useLocation untuk mendeteksi URL yang sedang aktif
+  const location = useLocation()
 
   return (
     <aside className="flex flex-col w-64 min-h-screen bg-white border-r border-gray-100 shrink-0">
@@ -157,8 +154,7 @@ export default function Sidebar({ activePage, onNavigate }) {
                 <NavItem
                   key={item.key}
                   item={item}
-                  active={active}
-                  onClick={handleClick}
+                  currentPath={location.pathname} // Oper URL saat ini ke NavItem
                 />
               ))}
             </div>
@@ -200,6 +196,7 @@ export default function Sidebar({ activePage, onNavigate }) {
           Made with <span className="text-red-400">♥</span> by Pertemuan 5
         </p>
       </div>
+
     </aside>
   )
 }
