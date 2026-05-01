@@ -34,17 +34,23 @@ export default function NotFound() {
           {/* Action */}
           <div className="mt-8 flex justify-center gap-4 flex-wrap">
             <Link
-              to="/dashboard"
+              to="/"
               className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-2xl font-semibold transition-all duration-200 shadow-sm"
             >
               Kembali ke Dashboard
             </Link>
 
             <Link
-              to="/order"
+              to="/orders"
               className="border border-gray-200 hover:bg-gray-50 text-gray-700 px-6 py-3 rounded-2xl font-semibold transition-all duration-200"
             >
               Buka Order List
+            </Link>
+            <Link
+              to="/customers"
+              className="border border-gray-200 hover:bg-gray-50 text-gray-700 px-6 py-3 rounded-2xl font-semibold transition-all duration-200"
+            >
+              Buka Customers
             </Link>
           </div>
         </div>

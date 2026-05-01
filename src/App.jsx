@@ -1,37 +1,49 @@
-﻿import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import MainLayout from './layouts/MainLayout'
-import AuthLayout from './layouts/AuthLayout'
+﻿import React, { Suspense } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-// --- Import Halaman Utama ---
-import Dashboard from './pages/Dashboard'
-import OrderList from './pages/OrderList' 
-import Customer from './pages/Customer'   
 
-// --- Import Halaman Auth ---
-import Login from './pages/auth/Login'
-import Register from './pages/auth/Register' // 👈 Pastikan import ini ada dan path-nya benar!
-import Forgot from './pages/auth/Forgot'     // 👈 Pastikan import ini ada dan path-nya benar!
+import MainLayout from './layouts/MainLayout';
+import AuthLayout from './layouts/AuthLayout';
+import './assets/tailwind.css';
+import Loading from './components/Loading';
+
+// --- Import Halaman Menggunakan React.lazy ---
+const Dashboard = React.lazy(() => import('./pages/Dashboard'));
+const OrderList = React.lazy(() => import('./pages/OrderList'));
+const Customer  = React.lazy(() => import('./pages/Customer'));
+
+const Login    = React.lazy(() => import('./pages/auth/Login'));
+const Register = React.lazy(() => import('./pages/auth/Register'));
+const Forgot   = React.lazy(() => import('./pages/auth/Forgot'));
+
+const NotFound = React.lazy(() => import('./pages/NotFound'));
 
 export default function App() {
+
+
+
   return (
     <BrowserRouter>
-      <Routes>
-        {/* Layout Utama (Pakai Sidebar) */}
-        <Route element={<MainLayout />}>
-          <Route path="/" element={<Dashboard />} />
-          <Route path="/orders" element={<OrderList />} />
-          <Route path="/customers" element={<Customer />} />
-        </Route>
+      <Suspense fallback={<Loading />}>
+        <Routes>
+          {/* Layout Utama (Pakai Sidebar) */}
+          <Route element={<MainLayout />}>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/orders" element={<OrderList />} />
+            <Route path="/customers" element={<Customer />} />
+          </Route>
 
-        {/* Layout Auth (Tanpa Sidebar, untuk Login, Register, dll) */}
-        <Route element={<AuthLayout />}>
-          <Route path="/login" element={<Login />} />
-          
-          {/*  👇 Tambahkan rute Register dan Forgot di dalam AuthLayout 👇 */}
-          <Route path="/register" element={<Register />} />
-          <Route path="/forgot" element={<Forgot />} />
-        </Route>
-      </Routes>
+          {/* Layout Auth (Tanpa Sidebar) */}
+          <Route element={<AuthLayout />}>
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/forgot" element={<Forgot />} />
+          </Route>
+
+            {/* Halaman 404 */}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Suspense>
     </BrowserRouter>
-  )
+  );
 }
