@@ -3,16 +3,18 @@
  */
 
 import PageHeader from '../components/PageHeader'
+import { Link } from 'react-router-dom'
 
+// PERUBAHAN 1: Memisahkan id (angka untuk API) dan displayId (teks untuk UI)
 const ORDERS = [
-  { id: '#ORD-001', customer: 'Jons Sena',       item: 'Nasi Goreng Spesial', qty: 2, total: 'Rp 85.000',  status: 'Delivered', date: '12 Jan 2025', avatar: 'jons'    },
-  { id: '#ORD-002', customer: 'Sofia Amalia',     item: 'Ayam Bakar + Es Teh', qty: 1, total: 'Rp 45.000',  status: 'On Process', date: '12 Jan 2025', avatar: 'sofia'   },
-  { id: '#ORD-003', customer: 'Budi Santoso',     item: 'Mie Goreng Seafood',  qty: 3, total: 'Rp 120.000', status: 'Delivered', date: '11 Jan 2025', avatar: 'budi'    },
-  { id: '#ORD-004', customer: 'Anandreansyah',    item: 'Sate Kambing 10pcs',  qty: 1, total: 'Rp 75.000',  status: 'Cancelled', date: '11 Jan 2025', avatar: 'anand'   },
-  { id: '#ORD-005', customer: 'Rina Kusuma',      item: 'Gado-gado + Lontong', qty: 2, total: 'Rp 56.000',  status: 'On Process', date: '10 Jan 2025', avatar: 'rina'    },
-  { id: '#ORD-006', customer: 'Doni Prasetyo',    item: 'Bakso Jumbo Spesial', qty: 4, total: 'Rp 96.000',  status: 'Delivered', date: '10 Jan 2025', avatar: 'doni'    },
-  { id: '#ORD-007', customer: 'Mega Wulandari',   item: 'Rendang + Nasi Putih',qty: 1, total: 'Rp 65.000',  status: 'Delivered', date: '09 Jan 2025', avatar: 'mega'    },
-  { id: '#ORD-008', customer: 'Fajar Hidayat',    item: 'Soto Betawi Spesial', qty: 2, total: 'Rp 78.000',  status: 'Cancelled', date: '09 Jan 2025', avatar: 'fajar'   },
+  { id: 1, displayId: '#ORD-001', customer: 'Jons Sena',      item: 'Nasi Goreng Spesial', qty: 2, total: 'Rp 85.000',  status: 'Delivered', date: '12 Jan 2025', avatar: 'jons'    },
+  { id: 2, displayId: '#ORD-002', customer: 'Sofia Amalia',   item: 'Ayam Bakar + Es Teh', qty: 1, total: 'Rp 45.000',  status: 'On Process', date: '12 Jan 2025', avatar: 'sofia'   },
+  { id: 3, displayId: '#ORD-003', customer: 'Budi Santoso',   item: 'Mie Goreng Seafood',  qty: 3, total: 'Rp 120.000', status: 'Delivered', date: '11 Jan 2025', avatar: 'budi'    },
+  { id: 4, displayId: '#ORD-004', customer: 'Anandreansyah',  item: 'Sate Kambing 10pcs',  qty: 1, total: 'Rp 75.000',  status: 'Cancelled', date: '11 Jan 2025', avatar: 'anand'   },
+  { id: 5, displayId: '#ORD-005', customer: 'Rina Kusuma',    item: 'Gado-gado + Lontong', qty: 2, total: 'Rp 56.000',  status: 'On Process', date: '10 Jan 2025', avatar: 'rina'    },
+  { id: 6, displayId: '#ORD-006', customer: 'Doni Prasetyo',  item: 'Bakso Jumbo Spesial', qty: 4, total: 'Rp 96.000',  status: 'Delivered', date: '10 Jan 2025', avatar: 'doni'    },
+  { id: 7, displayId: '#ORD-007', customer: 'Mega Wulandari', item: 'Rendang + Nasi Putih',qty: 1, total: 'Rp 65.000',  status: 'Delivered', date: '09 Jan 2025', avatar: 'mega'    },
+  { id: 8, displayId: '#ORD-008', customer: 'Fajar Hidayat',  item: 'Soto Betawi Spesial', qty: 2, total: 'Rp 78.000',  status: 'Cancelled', date: '09 Jan 2025', avatar: 'fajar'   },
 ]
 
 const STATUS_STYLE = {
@@ -92,7 +94,7 @@ export default function OrderList() {
           </div>
         </div>
 
-        {/* Table */}
+        {/* Table List */}
         <div className="overflow-x-auto">
           <table className="w-full">
             <thead>
@@ -110,8 +112,9 @@ export default function OrderList() {
                 <tr key={o.id} className="border-b border-gray-50 hover:bg-gray-50/60
                   transition-colors duration-100 group">
                   <td className="px-4 py-3.5 pl-6">
+                    {/* PERUBAHAN 2: Tampilkan o.displayId di tabel agar tetap muncul #ORD-001 */}
                     <span className="font-mono text-xs font-bold text-green-600 bg-green-50
-                      px-2 py-0.5 rounded-lg">{o.id}</span>
+                      px-2 py-0.5 rounded-lg">{o.displayId}</span>
                   </td>
                   <td className="px-4 py-3.5">
                     <div className="flex items-center gap-2.5">
@@ -124,7 +127,12 @@ export default function OrderList() {
                       <span className="text-sm font-semibold text-gray-800">{o.customer}</span>
                     </div>
                   </td>
-                  <td className="px-4 py-3.5 text-sm text-gray-600 max-w-[160px] truncate">{o.item}</td>
+                  <td className="px-4 py-3.5 text-sm text-gray-600 max-w-[160px] truncate">
+                    {/* PERUBAHAN 3: Link hanya membawa o.id (angka) tanpa slice() */}
+                    <Link to={`/products/${o.id}`} className="text-emerald-400 hover:text-emerald-600 font-medium">
+                      {o.item}
+                    </Link>
+                  </td>
                   <td className="px-4 py-3.5">
                     <span className="text-sm font-semibold text-gray-700 bg-gray-100
                       px-2 py-0.5 rounded-lg">{o.qty}x</span>

@@ -11,6 +11,7 @@ import Loading from './components/Loading';
 const Dashboard = React.lazy(() => import('./pages/Dashboard'));
 const OrderList = React.lazy(() => import('./pages/OrderList'));
 const Customer  = React.lazy(() => import('./pages/Customer'));
+const ProductDetail = React.lazy(() => import('./pages/ProductDetail'));
 
 const Login    = React.lazy(() => import('./pages/auth/Login'));
 const Register = React.lazy(() => import('./pages/auth/Register'));
@@ -31,6 +32,7 @@ export default function App() {
             <Route path="/" element={<Dashboard />} />
             <Route path="/orders" element={<OrderList />} />
             <Route path="/customers" element={<Customer />} />
+            <Route path="/products/:id" element={<ProductDetail />} />
           </Route>
 
           {/* Layout Auth (Tanpa Sidebar) */}
