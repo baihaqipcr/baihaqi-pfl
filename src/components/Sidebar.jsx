@@ -51,6 +51,7 @@ const NAV_GROUPS = [
       { key: 'dashboard', label: 'Dashboard',  icon: 'dashboard', routable: true, path: '/' },
       { key: 'order',     label: 'Order List', icon: 'order',     routable: true, path: '/orders' },
       { key: 'customer',  label: 'Customer',   icon: 'customer',  routable: true, path: '/customers' },
+      { key: 'components', label: 'Components', icon: 'components', routable: true, path: '/components' },
     ],
   },
   {
