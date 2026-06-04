@@ -51,15 +51,8 @@ const NAV_GROUPS = [
       { key: 'dashboard', label: 'Dashboard',  icon: 'dashboard', routable: true, path: '/' },
       { key: 'order',     label: 'Order List', icon: 'order',     routable: true, path: '/orders' },
       { key: 'customer',  label: 'Customer',   icon: 'customer',  routable: true, path: '/customers' },
+      { key: 'fitur-xyz', label: 'Fitur Xyz',  icon: 'order',     routable: true, path: '/fitur-xyz' },
       { key: 'components', label: 'Components', icon: 'components', routable: true, path: '/components' },
-    ],
-  },
-  {
-    label: 'Error Pages',
-    items: [
-      { key: 'error400',  label: 'Error 400',  icon: 'error',     routable: true, path: '/error400' },
-      { key: 'error401',  label: 'Error 401',  icon: 'error',     routable: true, path: '/error401' },
-      { key: 'error403',  label: 'Error 403',  icon: 'error',     routable: true, path: '/error403' },
     ],
   },
 ]
